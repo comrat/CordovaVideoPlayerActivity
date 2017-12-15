@@ -1,0 +1,40 @@
+{
+  "name": "cordova-plugin-video-player",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "cordova-plugin-video-player",
+    "platforms": [
+      "android"
+    ]
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "2.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comrat/CordovaVideoPlayerActivity.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova",
+    "video",
+    "player",
+    "controls",
+    "fullscreen"
+  ],
+  "author": "Pobery Alexey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comrat/CordovaVideoPlayerActivity/issues"
+  },
+  "homepage": "https://github.com/comrat/CordovaVideoPlayerActivity#readme"
+}

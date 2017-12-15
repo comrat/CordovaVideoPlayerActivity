@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.example.sample.plugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>CordovaVideoPlayerActivity</name>
+    <js-module name="CordovaVideoPlayerActivity" src="www/CordovaVideoPlayerActivity.js">
+        <clobbers target="CordovaVideoPlayerActivity" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="CordovaVideoPlayerActivity">
+                <param name="android-package" value="com.example.sample.plugin.CordovaVideoPlayerActivity" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:label="New Activity" android:name="com.example.sample.plugin.VideoPlayerActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/CordovaVideoPlayerActivity.java" target-dir="src/com/example/sample/plugin" />
+        <source-file src="src/android/VideoPlayerActivity.java" target-dir="src/com/example/sample/plugin" />
+        <source-file src="src/android/videoview_main.xml" target-dir="res/layout"/>
+    </platform>
+</plugin>
