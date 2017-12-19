@@ -30,8 +30,21 @@ public class CordovaVideoPlayerActivity extends CordovaPlugin {
     }
 
     private void openPlayer(Context context, String url) {
-        Intent intent = new Intent(context, VideoPlayerActivity.class);
-        intent.putExtra("VIDEO_URL", url);
-        this.cordova.getActivity().startActivity(intent);
+        this.cordova.getActivity().runOnUiThread(new Runnable() {
+            private String videoUrl;
+
+            @Override
+            public void run() {
+                Context context = cordova.getActivity().getApplicationContext();
+                Intent intent = new Intent(context, VideoPlayerActivity.class);
+                intent.putExtra("VIDEO_URL", videoUrl);
+                cordova.getActivity().startActivity(intent);
+            }
+
+            private Runnable init(String url){
+                videoUrl = url;
+                return this;
+            }
+        }.init(url) );
     }
 }
