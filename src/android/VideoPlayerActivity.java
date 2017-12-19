@@ -65,5 +65,13 @@ public class VideoPlayerActivity extends CordovaActivity {
                 videoview.start();
             }
         });
+
+        videoview.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Log.d(LOG_TAG, "Video completed");
+                VideoPlayerActivity.this.finish();
+            }
+        });
     }
 }
