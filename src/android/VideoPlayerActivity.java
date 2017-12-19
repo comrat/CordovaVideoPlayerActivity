@@ -1,5 +1,7 @@
 package com.example.sample.plugin;
 
+import android.content.Intent;
+
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
@@ -10,14 +12,16 @@ import android.util.Log;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
-public class VideoPlayerActivity extends Activity {
+import org.apache.cordova.*;
+
+public class VideoPlayerActivity extends CordovaActivity {
     protected static final String LOG_TAG = "VideoPlayer";
 
     ProgressDialog pDialog;
     VideoView videoview;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         String url;
         if (savedInstanceState == null) {

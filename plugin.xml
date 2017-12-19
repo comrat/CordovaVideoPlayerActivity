@@ -11,7 +11,11 @@
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:label="New Activity" android:name="com.example.sample.plugin.VideoPlayerActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
+            <activity
+                android:name="com.example.sample.plugin.VideoPlayerActivity"
+                android:theme="@android:style/Theme.NoTitleBar"
+                android:noHistory="true">
+            </activity>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/CordovaVideoPlayerActivity.java" target-dir="src/com/example/sample/plugin" />
