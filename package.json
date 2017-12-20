@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-video-player",
+  "name": "cordova-plugin-video-activity",
   "version": "0.0.1",
   "description": "",
   "cordova": {
-    "id": "cordova-plugin-video-player",
+    "id": "cordova-plugin-video-activity",
     "platforms": [
       "android"
     ]
