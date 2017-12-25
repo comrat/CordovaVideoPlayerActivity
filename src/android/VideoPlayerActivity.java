@@ -37,6 +37,7 @@ public class VideoPlayerActivity extends CordovaActivity {
 
         Log.d(LOG_TAG, "PlayUrl: " + url);
 
+        super.onCreate(savedInstanceState);
         setContentView(this.getResources().getIdentifier("videoview_main", "layout", this.getPackageName()));
         videoview = (VideoView)findViewById(this.getResources().getIdentifier("VideoView", "id", this.getPackageName()));
 
