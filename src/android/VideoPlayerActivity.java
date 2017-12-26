@@ -1,4 +1,4 @@
-package com.example.sample.plugin;
+package com.comrat.CordovaVideoPlayerActivity;
 
 import android.content.Intent;
 
