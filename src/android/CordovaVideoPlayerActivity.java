@@ -1,4 +1,4 @@
-package com.comrat.CordovaVideoPlayerActivity;
+package com.comrat.plugin;
 
 import android.content.Context;
 import android.content.Intent;
